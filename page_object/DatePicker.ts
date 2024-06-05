@@ -1,0 +1,30 @@
+import {Page, expect} from '@playwright/test';
+export class DatePicker {
+
+    readonly page:Page
+    constructor(page:Page){
+
+     this.page = page;
+
+}
+
+ 
+  get header(){
+    return "h1"
+
+  }
+
+ public async verifyHeader(){
+   const header = this.page.locator(this.header)
+   await expect(header).toContainText('Date Picker')
+
+  }
+ }
+ 
+ 
+
+
+
+
+    
+    
