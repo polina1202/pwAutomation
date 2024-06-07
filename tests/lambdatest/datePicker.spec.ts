@@ -5,6 +5,8 @@ it('working with date picker', async ({page}) => {
     let datePicker = new DatePicker(page)
     await page.goto('https://www.lambdatest.com/selenium-playground/jquery-date-picker-demo')
     datePicker.verifyHeader()
+    await datePicker.dateFromToday()
+    
     
 
 
